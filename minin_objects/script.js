@@ -17,41 +17,41 @@ const person = {
     }
 };
 
-// console.log(person.name);
-// console.log(person['age']);
-// console.log(person['complex key']);
-// person.age++;
-// person.greet();
-// person.languages.push('ge');
+console.log(person.name);
+console.log(person['age']);
+console.log(person['complex key']);
+person.age++;
+person.greet();
+person.languages.push('ge');
 
-// console.log(person);
-// person['key_4'] = undefined;
-// delete person['key_4'];
-// person['languages'].splice(0,1);
+console.log(person);
+person['key_4'] = undefined;
+delete person['key_4'];
+person['languages'].splice(0,1);
 
-// const name = person.name;
-// const age = preson.age;
-// const languages = person.languages;
+const name = person.name;
+const age = preson.age;
+const languages = person.languages;
 
-// const { name, age, languages} = person;
-// console.log(name, age, languages);
+const { name, age, languages} = person;
+console.log(name, age, languages);
 
-// for (let key in person) {
-//     if (person.hasOwnProperty(key)) { // Protection from mistakes
-//         console.log('key:', key);
-//         console.log('value:', person[key]);
-//     }
-// }
+for (let key in person) {
+    if (person.hasOwnProperty(key)) { // Protection from mistakes
+        console.log('key:', key);
+        console.log('value:', person[key]);
+    }
+}
 
-// const keys = Object.keys(person);
-// keys.forEach((key) => {
-//     console.log('key:', key);
-//     console.log('value:', person[key]);
-// })
+const keys = Object.keys(person);
+keys.forEach((key) => {
+    console.log('key:', key);
+    console.log('value:', person[key]);
+})
 
-// console.log(person.toString()); // [object Object]
+console.log(person.toString()); // [object Object]
 
-// console.log(keys);
+console.log(keys);
 
 person.info()
 
@@ -87,3 +87,4 @@ logger.keysAndValues2.call(person);
 
 
 console.log();
+
