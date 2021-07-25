@@ -21,6 +21,8 @@ const companies= [
 
 // Foreach
 
-companies.forEach(function(company, index, array) {
+companies.forEach(function(company, index) {
     console.log(`${index+1}: ${company.name} category: ${company.category}`);
 })
+
+
