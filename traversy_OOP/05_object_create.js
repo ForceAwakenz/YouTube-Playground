@@ -21,6 +21,19 @@ const bookProtos = {
 // Another Way
 
 const book1 = Object.create(bookProtos, {
+    title: {value: 'Big Book of Stories'},
+    author: {value: 'Arthur Author'},
+    year: {value: '2013'}
+});
+
+console.log(book1.getSummary());
+console.log(book1.getAge());
+
+console.log(book1);
+
+
+
+const book2 = Object.create(bookProtos, {
     title: {
         value: 'Big Book of Stories',
         enumerable: true
@@ -35,11 +48,7 @@ const book1 = Object.create(bookProtos, {
     }
 });
 
-console.log(book1.getSummary());
-console.log(book1.getAge());
-
-console.log(book1);
-
-for (let elem in book1) {
+alert();
+for (let elem in book2) {
     console.log(book1[elem]);
 }
