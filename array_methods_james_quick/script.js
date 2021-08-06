@@ -89,7 +89,7 @@ console.log('total mass: ' + totalMass);
 const totalHeight = characters.reduce((acc, cur) => +acc + +cur.height, 0);
 console.log('total height: ' + totalHeight);
 
-const eyeColor = characters.filter(char => char.eye_color).reduce((acc, cur) => acc += 1 , '');
+const eyeColor = characters.filter(char => char.eye_color).reduce((acc, cur) => acc + 1 , '');
 const eyeColor2 = characters.filter(char => char.eye_color).reduce((acc, cur) => ++acc, '');
 
 console.log(eyeColor);
@@ -113,10 +113,34 @@ string1++;
 // console.log(string1); // 222
 //-----------------
 
+const totalNumberOfCharacters = characters.reduce((acc, cur) =>
+    acc += cur.name.length, 0);
+console.log(totalNumberOfCharacters);
+
+
+// =============   Array.some()
+
+
+const isAnyMale = characters.some((character) => character.gender === 'male');
+console.log(isAnyMale);
+
+const isAnyBlueEyes = characters.some((character) => character.eye_color === 'blue');
+console.log(isAnyBlueEyes);
+
+const anyTallerThen210 = characters.some((character) => character.height > 210);
+console.log(anyTallerThen210);
+
+const anyLighterThan50 = characters.some((character) => character.mass < 50);
+console.log(anyLighterThan50);
 
 
 
+// =============   Array.every()
 
+const isEveryBlueEyes = characters.every((character) => character.eye_color === 'blue');
+console.log(isEveryBlueEyes);
 
+const isEveryMoreThan40 = characters.every((character) => character.mass > 40);
+console.log(isEveryMoreThan40);
 
 

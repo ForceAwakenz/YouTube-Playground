@@ -181,4 +181,33 @@ console.log(y); // y = [7, 1, 5, 2, 3] !! Didn't change with x
 // (not accurate)
 
 const points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return 0.5 - Math.random()});
+points.sort(function (a, b) { return 0.5 - Math.random() });
+
+
+// *****************  Reduce  *****************
+
+let ageSum = 0;
+for (let i = 0; i < ages.length; i++) {
+    ageSum += ages[i];
+}
+
+const ageSum1 = ages.reduce((acc, cur) => acc + cur, 0);
+
+console.log(ageSum);
+console.log(ageSum1);
+
+let i = { years: 0 };
+
+const totalYears = companies.reduce((total, curr) => total + curr.end - curr.start, 0);
+console.log(`all companies years total: ${totalYears}`);
+
+
+
+
+
+const combined = ages
+    .map(age => age * 2)
+    .filter(age => age >= 40)
+    .sort((a, b) => a - b)
+    .reduce((acc, cur) => acc + cur, 0);
+console.log(combined);
