@@ -10,12 +10,21 @@
     <style>
         #one {
             margin: 30px auto;
-            width: 100vw;
+            width: 98vw;
         }
         input {
             display: block;
             margin: 15px auto;
             padding: 10px;
+            text-decoration: ;
+        }
+        .smiles {
+            margin: 10px auto;
+            width: fit-content;
+            cursor: default;
+        }
+        #color {
+            visibility: hidden;
         }
     </style>
 
@@ -24,20 +33,40 @@
 
     <div id="one">
         <input type="text" name="text" id="text">
+        <input type="button" id="refresh" value="Refresh">
         <input type="button" id="button" value="Change">
+        <div class="smiles">
+            <span>😈</span>
+            <span>😎</span>
+            <span>🦊</span>
+        </div>
+        <input type="color" name="color" id="color">
     </div>
 
     <script>
-        const text = document.getElementById('text');
-        const button = document.getElementById('button');
+        'use strict'
 
-        console.log(text, button);
+        const text = document.getElementById('text');
+        const refresh = document.getElementById('refresh');
+        const button = document.getElementById('button');
+        const smilesDiv = document.getElementsByClassName('smiles');
+        const colorChange = document.getElementById('color');
+
+        refresh.addEventListener('click', () => {
+            text.style.color = 'black';
+            text.value = '';
+        });
 
         button.addEventListener('click', () => {
             text.style.color = 'red';
-            text.value += 'hi';
+            text.value += '<<<hi';
+            // color.click();
         });
 
+        smilesDiv[0].addEventListener('click', (e) => {
+            console.log(e);
+            text.value += e.path[0].innerText;
+        })
 
     </script>
     
