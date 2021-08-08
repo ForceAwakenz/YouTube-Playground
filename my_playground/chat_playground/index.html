@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script.js"></script>
+
+    <style>
+        #one {
+            margin: 30px auto;
+            width: 100vw;
+        }
+        input {
+            display: block;
+            margin: 15px auto;
+            padding: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="one">
+        <input type="text" name="text" id="text">
+        <input type="button" id="button" value="Change">
+    </div>
+
+    <script>
+        const text = document.getElementById('text');
+        const button = document.getElementById('button');
+
+        console.log(text, button);
+
+        button.addEventListener('click', () => {
+            text.style.color = 'red';
+            text.value += 'hi';
+        });
+
+
+    </script>
+    
+</body>
+</html>
