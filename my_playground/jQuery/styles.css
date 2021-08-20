@@ -1,0 +1,13 @@
+body {
+  background-color: salmon;
+}
+
+.big-title {
+  font-size: 3rem;
+  color: yellowgreen;
+  font-family: cursive;
+}
+
+.margin-50 {
+  margin: 50px;
+}
