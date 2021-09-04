@@ -40,15 +40,17 @@ function isEmpty2(obj) {
 }
 
 
-// isEmpty(schedule);
+isEmpty(schedule);
+isEmpty2(schedule);
 
-// alert(isEmpty(schedule));
+
+console.log('Is array is empty ' + isEmpty(schedule), isEmpty2(schedule));
 
 schedule['8:30'] = 'get up';
 
 isEmpty(schedule);
 
-alert(isEmpty(schedule));
+// alert(isEmpty(schedule));
 
 
 let salaries = {
@@ -63,7 +65,7 @@ for (let keys in salaries) {
     sum += salaries[keys];
 }
 
-alert(sum);
+// alert(sum);
 
 
 let menu = {
@@ -83,42 +85,42 @@ let menu = {
         }
     }
     
-console.log(menu);
+// console.log(menu);
 
-multiplyNumericObj(menu);
+// multiplyNumericObj(menu);
     
-console.log(menu);
+// console.log(menu);
 
 
-const user = {
-    name: 'Victor',
-    age: 22,
-}
+// const user = {
+//     name: 'Victor',
+//     age: 22,
+// }
 
-Object.assign(user, { salary: 10000, age: 33 });
+// Object.assign(user, { salary: 10000, age: 33 });
 
-console.log(user);
-
-
-let clone = Object.assign({}, user);
-
-console.log(clone);
+// console.log(user);
 
 
-function sayHi() {
-    alert( this.name );
-}
+// let clone = Object.assign({}, user);
 
-let alfred = { name: 'Alfred'};
-let jack = { name: 'Jack'};
+// console.log(clone);
 
-alfred.f = sayHi; // Присваиваем код функции в параметры объектов
-jack.f = sayHi;
 
-Вызываем функции
-alfred.f(); // Alfred
-jack.f(); // Jack
-jack['f'](); // Jack // Второй способ вызова функции
+// function sayHi() {
+//     alert( this.name );
+// }
+
+// let alfred = { name: 'Alfred'};
+// let jack = { name: 'Jack'};
+
+// alfred.f = sayHi; // Присваиваем код функции в параметры объектов
+// jack.f = sayHi;
+
+// // Вызываем функции
+// alfred.f(); // Alfred
+// jack.f(); // Jack
+// jack['f'](); // Jack // Второй способ вызова функции
 
 
 
