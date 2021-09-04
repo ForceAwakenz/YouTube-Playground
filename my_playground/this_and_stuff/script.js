@@ -132,6 +132,7 @@
 // let ladder = {
 //     step: 0,
 //     up() {
+<<<<<<< HEAD
 //       this.step++;
 //     },
 //     down() {
@@ -196,6 +197,68 @@
 
 
 // let a = true && 10 > 5 ? 'continue' : 5;
+=======
+//         this.step++;
+//         return this;
+//     },
+//     down() {
+//         this.step--;
+//         return this;
+//     },
+//     showStep: function() { // показывает текущую ступеньку
+//       console.log( this.step );
+//     }
+// };
+  
+// ladder.up();
+// ladder.up();
+// ladder.down();
+// ladder.showStep(); // 1
+
+// ladder.up().up().up().up().down().showStep(); // 4
+
+
+// ==================================================
+
+/*
+
+Создаём Accumulator
+важность: 5
+Напишите функцию-конструктор Accumulator(startingValue).
+
+Объект, который она создаёт, должен уметь следующее:
+
+Хранить «текущее значение» в свойстве value. Начальное значение устанавливается в аргументе конструктора startingValue.
+Метод read() использует prompt для получения числа и прибавляет его к свойству value.
+Таким образом, свойство value является текущей суммой всего, что ввёл пользователь при вызовах метода read(), с учётом начального значения startingValue.
+
+Ниже вы можете посмотреть работу кода:
+
+*/
+
+// function Accumulator(startingValue) {
+//     this.value = startingValue;
+
+//     this.read = function () {
+//         this.value += +prompt('Add some value: ', 0);
+//     }
+
+// }
+
+// let accumulator = new Accumulator(1); // начальное значение 1
+
+// accumulator.read(); // прибавит ввод prompt к текущему значению
+// accumulator.read(); // прибавит ввод prompt к текущему значению
+
+// alert(accumulator.value); // выведет сумму этих значений
+
+
+// ==================================================
+
+
+
+
+>>>>>>> 1ea23ad6bffb1024c375cf6e6f3a9d13421242a5
 
 // console.log(a);
 // let b = 7;
