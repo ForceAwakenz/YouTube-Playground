@@ -132,6 +132,72 @@ theObject.justArrow();
 // let ladder = {
 //     step: 0,
 //     up() {
+<<<<<<< HEAD
+//       this.step++;
+//     },
+//     down() {
+//       this.step--;
+//     },
+//     showStep: function() { // показывает текущую ступеньку
+//       alert( this.step );
+//     }
+//   };
+
+// ==================================================
+
+// for (var i = 0; i <= 5; i++) {
+
+//   setTimeout(() => {
+//     console.log('i: ', i); // 5 times 6
+//   } , i * 1000);
+
+// }
+
+
+// for (var i = 0; i <= 5; i++) {
+
+// (  setTimeout(() => {
+//     console.log('i: ', i); // 5 times
+//   } , i * 1000))();
+
+// }
+
+
+// hmm.. doesn't work if previous cycles uncommented!
+
+// for (var i = 0; i <= 5; i++) {
+
+//  (function (i) {
+
+//     setTimeout(() => {
+//       console.log('i: ', i);
+//     } , i * 1000);
+
+//   })(i);
+  
+//   }
+
+
+// =====================================
+
+// var foo = (function() {
+//   var o = {bar: 'bar'};
+//   return {obj: o};
+// })();
+
+// console.log(foo.obj.bar);
+
+
+// foo.obj.bar = 'zoo';
+
+// console.log(foo.obj.bar);
+
+
+// =====================================
+
+
+// let a = true && 10 > 5 ? 'continue' : 5;
+=======
 //         this.step++;
 //         return this;
 //     },
@@ -192,5 +258,9 @@ theObject.justArrow();
 
 
 
+>>>>>>> 1ea23ad6bffb1024c375cf6e6f3a9d13421242a5
 
+// console.log(a);
+// let b = 7;
+// console.log(b);
 
