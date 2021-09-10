@@ -74,35 +74,35 @@
 
 // =========================
 
-// const arrow = () => console.log(this);
-// const func = function() {console.log(this);}
+const arrow = () => console.log(this);
+const func = function() {console.log(this);}
 
-// const obj3 = { a: 17 };
+const obj3 = { a: 17 };
 
-// arrow.apply(obj3); // Window {...}
-// func.apply(obj3); // {a: 17}
+arrow.apply(obj3); // Window {...}
+func.apply(obj3); // {a: 17}
 
 
-// theObject = {
-//     someKey: 'Some Value',
-//     arrowInside() {
-//         console.log(this); // theObject
-//         const arrw = () => console.log(this); // theObject
-//         arrw();
-//     },
-//     regFuncInside() {
-//         console.log(this); // theObject
-//         const regFunc = function () { console.log(this); } // Window {...}
-//         regFunc();
-//     },
-//     justArrow: () => console.log(this) // Window {...}
-// }
+theObject = {
+    someKey: 'Some Value',
+    arrowInside() {
+        console.log(this); // theObject
+        const arrw = () => console.log(this); // theObject
+        arrw();
+    },
+    regFuncInside() {
+        console.log(this); // theObject
+        const regFunc = function () { console.log(this); } // Window {...}
+        regFunc();
+    },
+    justArrow: () => console.log(this) // Window {...}
+}
 
-// theObject.arrowInside();
+theObject.arrowInside();
 
-// theObject.regFuncInside();
+theObject.regFuncInside();
 
-// theObject.justArrow();
+theObject.justArrow();
 
 
 // ==================================================

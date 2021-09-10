@@ -26,4 +26,4 @@ alert( counter() ); // 10
 
 counter.decrease(); // уменьшить значение счётчика на 1
 
-alert( counter() ); // 10 (вместо 11)
+alert(counter()); // 10 (вместо 11)
