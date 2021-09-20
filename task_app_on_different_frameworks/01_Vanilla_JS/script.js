@@ -1,26 +1,44 @@
 'use strict';
 
-const input = document.getElementById('taskInput');
-document.getElementById('addBtn').addEventListener('click', () => createTask(input.value));
+const taskInput = document.getElementById('taskInput');
+const addBtn = document.getElementById('addBtn');
+const main = document.querySelector('main');
 
-function createTask(taskName) {
-    const newTask = document.createElement('div');
-    const closeBtn = document.createElement('button');
-    const taskText = document.createTextNode(taskName);
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-    closeBtn.innerText = 'close';
-    closeBtn.classList.add('closeBtn');
-    
-    newTask.append(taskText);
-    newTask.append(closeBtn);
-    
-    document.querySelector('main').append(newTask);
-    
-    const closeBtnArr = document.querySelectorAll('button.closeBtn');
-    closeBtnArr.forEach(btn => {
-        btn.addEventListener('click', (e) => e.target.parentElement.remove())
-    });
-    
-    input.value = '';
+renderItems();
+
+addBtn.addEventListener('click', (e) => addItemToArr(e));
+
+function addItemToArr() {
+    tasks.push(taskInput.value);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    taskInput.value = '';
+    renderItems();
 }
 
+function renderItems() {
+
+    main.innerHTML = '';
+    tasks.forEach(task => {
+        const taskItem = document.createElement('div');
+        const closeBtn = document.createElement('button');
+        closeBtn.classList.add('close');
+        closeBtn.textContent  = 'close';
+        const taskText = document.createTextNode(task);
+        taskItem.append(taskText);
+        taskItem.append(closeBtn);
+        main.append(taskItem);
+
+    });
+
+    const [...buttons] = document.getElementsByClassName('close');
+    buttons.forEach((btn, indx) => btn.addEventListener('click', 
+        e =>  {
+            e.target.parentNode.remove();
+            tasks.splice(indx, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        })
+    );
+
+}
