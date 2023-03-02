@@ -29,12 +29,12 @@ person['key_4'] = undefined;
 delete person['key_4'];
 person['languages'].splice(0,1);
 
-const name = person.name;
-const age = preson.age;
-const languages = person.languages;
+// const name = person.name;
+// const age = preson.age;
+// const languages = person.languages;
 
-const { name, age, languages} = person;
-console.log(name, age, languages);
+// const { name, age, languages} = person;
+// console.log(name, age, languages);
 
 for (let key in person) {
     if (person.hasOwnProperty(key)) { // Protection from mistakes
